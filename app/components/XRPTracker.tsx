@@ -279,7 +279,7 @@ export default function XRPTracker() {
                         borderRadius: '8px',
                         color: '#fff'
                       }}
-                      formatter={(value: number) => [`$${value.toFixed(4)}`, 'Price']}
+                      formatter={(value: number | undefined) => value ? [`$${value.toFixed(4)}`, 'Price'] : ['N/A', 'Price']}
                       labelStyle={{ color: '#a1a1aa' }}
                     />
                     <Line 
